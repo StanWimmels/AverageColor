@@ -19,28 +19,34 @@ function average() {
         .replace(/ /g, '')
         .split(',');
 
-    var r0 = parseInt(c1[0]);
-    var r1 = parseInt(c1[1]);
-    var r2 = parseInt(c1[2]);
-    var r00 = parseInt(c2[0]);
-    var r01 = parseInt(c2[1]);
-    var r02 = parseInt(c2[2]);
-    var red = (r0 + r00) / 2;
-    var green = (r1 + r01) / 2;
-    var blue = (r2 + r02) / 2;
+    var r1 = parseInt(c1[0]);
+    var g1 = parseInt(c1[1]);
+    var b1 = parseInt(c1[2]);
+    var r2 = parseInt(c2[0]);
+    var g2 = parseInt(c2[1]);
+    var b2 = parseInt(c2[2]);
 
-    console.log(red);
-    console.log(green);
-    console.log(blue);
+    var NewColor = [
+        Math.sqrt(r1 * r2),
+        Math.sqrt(g1 * g2),
+        Math.sqrt(b1 * b2)
+    ]
+    console.log(NewColor);
 
-    var max = Math.max(red, green, blue); // 255
+
+    /*var max = Math.max(red, green, blue); // 255
     console.log(max);
     var AverageColor = [
         Math.floor(red), // 0 / 255 * 255 = 0 
         Math.floor(green), // 255 / 255 * 255 = 255 
         Math.floor(blue) // 255 / 255 * 255 = 255 
-    ];
-    var NewColor = "rgb" + "(" + AverageColor.toString() + ")";
-    console.log(NewColor);
-    element3.style.backgroundColor = NewColor;
+    ];*/
+    var Color = "rgb" + "(" + NewColor.toString() + ")";
+    element3.style.backgroundColor = Color;
 }
+/*
+var NewColor = [
+    Math.sqrt(Math.pow(r1, 2) + Math.pow(r2, 2) / 2),
+    Math.sqrt(Math.pow(g1, 2) + Math.pow(g2, 2) / 2),
+    Math.sqrt(Math.pow(b1, 2) + Math.pow(b2, 2) / 2)
+]*/
