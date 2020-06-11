@@ -33,20 +33,6 @@ function average() {
     ]
     console.log(NewColor);
 
-
-    /*var max = Math.max(red, green, blue); // 255
-    console.log(max);
-    var AverageColor = [
-        Math.floor(red), // 0 / 255 * 255 = 0 
-        Math.floor(green), // 255 / 255 * 255 = 255 
-        Math.floor(blue) // 255 / 255 * 255 = 255 
-    ];*/
     var Color = "rgb" + "(" + NewColor.toString() + ")";
     element3.style.backgroundColor = Color;
 }
-/*
-var NewColor = [
-    Math.sqrt(Math.pow(r1, 2) + Math.pow(r2, 2) / 2),
-    Math.sqrt(Math.pow(g1, 2) + Math.pow(g2, 2) / 2),
-    Math.sqrt(Math.pow(b1, 2) + Math.pow(b2, 2) / 2)
-]*/
